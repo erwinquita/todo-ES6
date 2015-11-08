@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.todoList:not(:empty)::before {
+		display: inline-block;
+		content: 'Click todo item to delete';
+		border-bottom: 1px dashed grey;
+		margin-bottom: 20px;
+	}
+	</style>
+</head>
+
+
+<body>
+	<form id="addTodoForm">
+		<fieldset>
+			<legend>Todo List</legend>
+			<input id="addTodo">
+			<button type="submit">Add</button>
+		</fieldset>
+	</form>
+
+
+<!--
+<input id="input" />
+<div id="inputOutput"></div>
+//-->
+
+<ul id="todos" class="todoList"></ul>
+
+<script src="jspm_packages/system.js"></script>
+<script src="config.js"></script>
+<script>
+	System.import('lib/main')
+</script>
+
+<!-- <script src="build.js"></script> //-->
+</body>
+</html>
